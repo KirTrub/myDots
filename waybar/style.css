@@ -1,4 +1,4 @@
-* {
+* {	
     border: 0px;
     border-radius: 20px;
     font-family: "JetBrainsMono Nerd Font";
@@ -58,10 +58,12 @@ tooltip {
 #custom-power_profile,
 #custom-weather,
 #window,
+#custom-vkplayer,
 #clock,
 #battery,
 #custom-gpu-usage,
 #cpu,
+#custom-notification,
 #pulseaudio,
 #custom-intellij,
 #custom-steam,
@@ -88,12 +90,14 @@ tooltip {
 
 #temperature {
     border-radius: 20px 0px 0px 20px;
+    border: none;
 }
 
 #custom-vpn {
-	border-radius: 0 20 20 0;
+	color: #009bff;
+	border-radius: 0px 20px 20px 0px;
 	border: none;
-	font-size: 15;
+	font-size: 17px;
 
 }
 
@@ -115,7 +119,14 @@ tooltip {
 }
 
 #custom-startwine{
-	color: white;
+	color: #fffe9b;
+	border-radius: 0px;
+	border: none;
+	font-size: 15px;
+}
+
+#custom-vkplayer{
+	color: pink;
 	border-radius: 0px;
 	border: none;
 	font-size: 15px;
@@ -138,6 +149,7 @@ tooltip {
 }
 
 #custom-telegram{
+	font-size: 13px;
 	border: 0px;
 	border-radius: 0px;
 	color: #00E5FF;
@@ -169,7 +181,6 @@ tooltip {
 #custom-power_profile {
     color: #a6e3a1;
     border-left: 0px;
-    border-right: 0px;
 }
 
 #window {
@@ -208,7 +219,7 @@ tooltip {
     border-left: 20px;
     border-right: 20px;
     margin-right: 5px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 0px 20px 20px 0px;
 }
 
 #pulseaudio.microphone {
@@ -222,9 +233,9 @@ tooltip {
 
 #battery {
     color: #a6e3a1;
-    border-radius: 0 20px 20px 0;
-    margin-right: 5px;
-    border-left: 0px;
+    border-radius: 0px 0px 0px 0px;
+    margin-right: 0px;
+    border: none;
 }
 
 #custom-weather {
@@ -233,9 +244,16 @@ tooltip {
     margin-left: 5px;
 }
 
+#custom-notification{
+	border-radius:20px 0px 0px 20px ;
+	border: none;
+	margin-right: 0px;
+}
+
 #custom-poweroff{
-  border-radius: 20px;
+  border-radius: 0px 20px 20px 0px;
   margin-right: 5px;
+  margin-left: 0px;
   padding: 0px 12px 0px 10px;
   font-size: 12px;
 }
