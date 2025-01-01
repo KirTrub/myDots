@@ -4,6 +4,7 @@
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -76,7 +77,7 @@ plugins=(git)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
+ #You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
@@ -85,6 +86,10 @@ plugins=(git)
 # else
 #   export EDITOR='nvim'
 # fi
+
+
+export PATH="$PATH:/home/kirtr/programs/tor-browser/Browser/"
+export PATH="$PATH:/home/kirtr/programs/Intellij_idea/bin"
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -107,3 +112,18 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
+alias ls='ls --color=auto'
+alias editconf='subl ~/.config/hypr/hyprland.conf &'
+alias fhid='sudo -A hiddify &'
+alias wbconf='subl /etc/xdg/waybar/RoundBlocksStyle/config.jsonc &'
+alias wbstyle='subl /etc/xdg/waybar/RoundBlocksStyle/style.css &'
+alias grep='grep --color=auto'
+alias ff='clear && fastfetch'
+alias nf='clear && neofetch'
+alias fex='hyprctl dispatch -- exec '
+alias wbb='waybar -c /etc/xdg/waybar/BlurDieStyle/config.jsonc -s /etc/xdg/waybar/BlurDieStyle/style.css'
+alias wbr='waybar -c /etc/xdg/waybar/RoundBlocksStyle/config.jsonc -s /etc/xdg/waybar/RoundBlocksStyle/style.css'
+alias wbrr='pkill waybar && fex wbr &'
+alias wbbr='pkill waybar && fex wbb &'
+alias tor='start-tor-browser &'
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
