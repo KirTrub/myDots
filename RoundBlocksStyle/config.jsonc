@@ -1,0 +1,231 @@
+{
+    "reload_style_on_change": true,
+    "layer": "top",
+    "position": "top",
+    "margin-right": 5,
+    "margin-left": 5,
+    "margin-top": 5,
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 30,
+    "modules-left": [/*"wlr/taskbar","hyprland/workspaces",*/ "custom/wofi", "custom/filemanager","custom/edge", "custom/telegram", "custom/intellij", "custom/startwine", "custom/vkplayer", "custom/vpn", "tray","custom/weather","hyprland/language"],
+    "modules-center": ["clock", "custom/cpu", "custom/button"],
+    "modules-right": ["network", "bluetooth","temperature","custom/power_profile","battery", "memory","backlight","pulseaudio", "custom/notification", "custom/poweroff", "custom/smth"],
+    "hyprland/window": {
+        "format": "{}"
+    },
+        "hyprland/language": {
+            "on-click": "~/.local/bin/switchLang",
+    "format": "{}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "keyboard-name": "razer-razer-cynosa-v2"
+},
+"custom/filemanager":{
+    "format": "",
+    "on-click": "thunar"
+},
+/*"wlr/taskbar": {
+        "all-outputs": true,
+        "icon-size": 16,
+        "on-click": "activate"
+    },*/
+
+"custom/notification":{
+	"format": "",
+	"on-click": "swaync-client --open-panel"
+},
+"custom/wofi":{
+    "format": "󰀻",
+    "on-click": "wofi --show drun"
+},
+"custom/smth":{
+	"format": ""
+},
+
+
+"custom/vkplayer":{
+	"format": "󰝚",
+	"on-click": "flatpak run io.github.purplehorrorrus.Meridius"
+},
+   
+"custom/vpn":{
+	"format": "󰌆 ",
+	"on-click": "sudo -A hiddify"	
+},
+
+
+  "custom/startwine":{
+        "format": "󰡶",
+        "on-click": "startwine"
+},
+
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+"custom/intellij":{
+        "on-click": "idea",
+        "format": ""
+},
+
+"custom/edge":{
+        "on-click": "firefox",
+        "format": ""
+
+
+},
+
+"custom/telegram":{
+        "on-click": "telegram-desktop",
+        "format": " "
+
+},
+
+
+    //"custom/power_profile":{
+        //shows the current power profile and switches to next on click
+    //    "exec": "asusctl profile -p | sed s:'Active profile is'::",
+    //    "interval": 30,
+    //    "format": "󰈐{}",
+    //    "on-click": "asusctl profile -n; pkill -SIGRTMIN+8 waybar",
+    //    "signal": 8
+    //},
+
+    "custom/weather" : {
+        "on-click": "firefox https://www.gismeteo.ru/weather-tomsk-4652/",
+         "tooltip" : true,
+        "format" : "{}",
+        "interval" : 30,
+        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "return-type" : "json"
+    },
+
+"custom/gpu-usage": {
+  "format": "{icon}  {text}",
+  "exec": "gpu-usage-waybar",
+  "return-type": "json",
+  "format-icons": "󰾲 ",
+  "on-click": "kitty nvtop",
+},
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+
+    "clock": {
+        "format": "{:%H:%M %a}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "min-length": 6
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": " Muted",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "Mic: {volume}%",
+        "format-source-muted": "Mic: Muted",
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+   "temperature": {
+        "hwmon-path": "sys/class/hwmon/hwmon3/temp1_input",
+        "interval": 2,
+        "thermal-zone": 4,
+        "on-click": "mcontrolcenter",
+        "format": "{temperatureC}°C ",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C "
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  {essid}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
+},
+
+    "bluetooth": {
+            "format": " {status}",
+            "format-disabled": "󰂲", // an empty format will hide the module
+            "format-connected": " {num_connections}",
+            "tooltip-format": "{device_alias}",
+            "on-click": "blueman-manager",
+            "tooltip-format-connected": " {device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}"
+    },
+        "custom/poweroff":{
+        "tooltip": false,
+            "format": "⏻",
+            "on-click": "wlogout"
+
+},
+"memory": {
+  "interval": 2,
+  "format": " {used:0.1f}GiB({percentage}%)"
+},
+
+}
+
