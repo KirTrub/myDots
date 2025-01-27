@@ -1,6 +1,6 @@
 {
     "reload_style_on_change": true,
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "margin-right": 5,
     "margin-left": 5,
@@ -10,9 +10,15 @@
     "passthrough": false,
     "gtk-layer-shell": true,
     "height": 30,
-    "modules-left": [/*"wlr/taskbar","hyprland/workspaces",*/ "custom/wofi", "custom/filemanager","custom/edge", "custom/telegram", "custom/intellij", "custom/startwine", "custom/vkplayer", "custom/vpn", "tray","custom/weather","hyprland/language"],
-    "modules-center": ["clock", "custom/cpu", "custom/button"],
-    "modules-right": ["network", "bluetooth","temperature","custom/power_profile","battery", "memory","backlight","pulseaudio", "custom/notification", "custom/poweroff", "custom/smth"],
+
+    "modules-left": ["custom/wofi", "custom/filemanager","custom/edge", "custom/telegram",
+    "custom/intellij", "custom/startwine", "custom/vkplayer", "custom/vpn", "custom/weather",
+    "hyprland/workspaces"],
+
+
+
+    "modules-center": ["clock", "custom/button"],
+    "modules-right": ["hyprland/language", "temperature","custom/power_profile","battery", "memory","cpu" ,"backlight","pulseaudio", "tray","custom/notification", "custom/poweroff"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -20,18 +26,18 @@
             "on-click": "~/.local/bin/switchLang",
     "format": "{}",
     "format-en": "EN",
-    "format-ru": "RU",
-    "keyboard-name": "razer-razer-cynosa-v2"
+    "format-ru": "RU"
+    /*"keyboard-name": "razer-razer-cynosa-v2"*/
 },
 "custom/filemanager":{
     "format": "",
-    "on-click": "thunar"
+    "on-click": "nautilus"
 },
-/*"wlr/taskbar": {
-        "all-outputs": true,
-        "icon-size": 16,
-        "on-click": "activate"
-    },*/
+
+"cpu":{
+    "format": " {usage}%",
+    "interval": 2
+},
 
 "custom/notification":{
 	"format": "",
@@ -53,7 +59,7 @@
    
 "custom/vpn":{
 	"format": "󰌆 ",
-	"on-click": "sudo -A hiddify"	
+	"on-click": "sudo -A prime-run hiddify"	
 },
 
 
@@ -63,21 +69,17 @@
 },
 
 
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
+     "hyprland/workspaces": {
         "on-click": "activate",
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": [],
-            "6": [],
-            "7": [],
-            "8": [],
-            "9": [],
-            "10": []
+        "format": "{icon}",
+        "all-outputs": true,
+        "format-icons": {
+            "default": "",
+            "active": "",
+            "persistent": ""
+        },
+        "persistent-workspaces": {
+            "*": [1, 2, 3, 4, 5]
         }
     },
 
@@ -113,8 +115,8 @@
         "on-click": "firefox https://www.gismeteo.ru/weather-tomsk-4652/",
          "tooltip" : true,
         "format" : "{}",
-        "interval" : 30,
-        "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
+        "interval" : 1,
+        "exec" : "~/myDots/scripts/waybar-wttr.py",
         "return-type" : "json"
     },
 
@@ -127,13 +129,13 @@
 },
 
     "tray": {
-        "icon-size": 15,
+        "icon-size": 13,
         "spacing": 10
     },
 
     "clock": {
         "format": "{:%H:%M %a}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%Y %B}\n<tt>{calendar}</tt></big>"
     },
 
     "backlight": {

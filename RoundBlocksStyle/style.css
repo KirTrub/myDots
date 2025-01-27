@@ -1,6 +1,6 @@
 * {	
     border: 0px;
-    border-radius: 20px;
+    border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bolder;
     font-size: 11px;
@@ -11,12 +11,12 @@
 
 window#waybar {
     /*background: rgba(0, 0, 0, 0.3);*/
-    background: rgba(10, 10, 10, 0);
+    background: rgba(27, 27, 27, 0.0);
     color: #cdd6f4;
 }
 
 tooltip {
-      background: #1e1e2e;   
+      background: rgba(38, 38, 38, 1.0);   
     
     border-radius: 10px;
     border-width: 1.5px;
@@ -25,40 +25,40 @@ tooltip {
     transition: 0.3s;
 }
 
-#workspaces button {
-    padding: 5px;
-    color: #6A6B6D;
-    margin-right: 5px;
+#workspaces button label{
+    font-size: 16px;
 }
+
 
 
 #workspaces button.active {
     color: #F3EEEE;
+    font-size: 40px;
 }
 
-#workspaces button.focused {
+#hyprland-workspaces button.focused {
     border-top: 0px;
     color: #a6adc8;
     background: #eba0ac;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #workspaces button.urgent {
-    color: #11111b;
+    color: #000000;
     background: #E0E5F4;
-    border-radius: 20px;
+    border-radius: 10px;
 }
+
 
 #workspaces button:hover {
     background: #11111b;
-    
     color: #cdd6f4;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 #custom-power_profile,
 #custom-weather,
-#custom-cpu,
+#cpu,
 #window,
 #custom-vkplayer,
 #custom-filemanager,
@@ -84,9 +84,10 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background: #1e1e2e;
+    background: rgba(27, 27, 27, 1.0);
+    /*background: #1b1b1b;*/
     /*background: transparent;*/
-    opacity: 0.8;
+    opacity: 1;
     padding: 0px 10px;
     margin: 0;
     margin-top: 0px;
@@ -100,12 +101,12 @@ tooltip {
 }
 
 #temperature {
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
     border: none;
 }
 
 #custom-wofi{
-    border-radius: 20px 0px 0px 20px;
+    border-radius: 10px 0px 0px 10px;
     margin-left: 5px;
     font-size: 17px;
         /*line-height: 2px;*/
@@ -119,22 +120,23 @@ tooltip {
 
 #custom-vpn {
 	color: #009bff;
-	border-radius: 0px 20px 20px 0px;
+	border-radius: 0px 10px 10px 0px;
 	border: none;
-    border-right: 1px dotted #000000;
 	font-size: 17px;
+    margin-right: 5px;
 
 }
 
 
 #language{
-	border-radius: 20px;
+	border-radius: 10px;
 	margin-left: 5px;
+    margin-right: 10px;
 
 }
 
 #custom-steam{
-	border-radius: 20px;
+	border-radius: 10px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -160,6 +162,7 @@ tooltip {
 #backlight {
     border-radius: 0px 0px 0px 0px;
     padding-left: 7px;
+    margin-right: 0px;
     border: none;
 }
 
@@ -182,19 +185,20 @@ tooltip {
 }
 
 #tray {
+    font-size: 5px;
     margin-left: 5px;
-    border-radius: 20px;
-    border-right: 1px dotted #000000;
-    margin-right: 0px;
+    border-radius: 10px;
+    margin-right: 10px;
     padding: 0px 7px;
+    padding-right: 7px;
 }
 
 #workspaces {
-    background: transparent;
-    border-radius: 20px;
-    margin-left: 5px;
-    padding-right: 0px;
-    padding-left: 5px;
+    background: rgba(27, 27, 27, 1.0);
+    border-radius: 10px;
+    margin-left: 0px;
+    padding-right: 5px;
+    padding-left: 0px;
 }
 
 #custom-edge {
@@ -215,14 +219,14 @@ tooltip {
 #window {
     margin-bottom: 0px;
     padding-bottom: 0px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 #clock {
     color: #fab387;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-left: 5px;
     border-right: 0px;
     font-size: 11px;
@@ -240,7 +244,7 @@ tooltip {
 
 #bluetooth {
     color: #89b4fa;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-right: 5px
 } 
 
@@ -249,7 +253,8 @@ tooltip {
     border-left: 20px;
     border-right: 20px;
     margin-right: 5px;
-    border-radius: 0px 20px 20px 0px;
+    margin-left: 0px;
+    border-radius: 0px 10px 10px 0px;
 }
 
 #pulseaudio.microphone {
@@ -270,23 +275,25 @@ tooltip {
 }
 
 #custom-weather {
-    border-radius: 20px;
+    border-radius: 10px;
     border-right: 0px;
     margin-left: 5px;
+    margin-right: 10px;
 }
 
 #custom-notification{
-	border-radius:20px 0px 0px 20px ;
+	border-radius:10px 0px 0px 10px ;
 	border: none;
+    font-size: 13px;
 	margin-right: 0px;
 }
 
 #custom-poweroff{
-  border-radius: 0px 20px 20px 0px;
+  border-radius: 0px 10px 10px 0px;
   margin-right: 5px;
   margin-left: 0px;
   padding: 0px 12px 0px 10px;
-  font-size: 12px;
+  font-size: 13px;
 }
 #memory{
     color: #EE82EE;
@@ -296,8 +303,8 @@ tooltip {
     margin-left: 0px;
 }
 
-#custom-cpu{
-	margin-left: 5px;
-	color: #EE82EE;
-    border-radius: 20px;
+#cpu{
+	margin-right: 0px;
+	color: #e46bff;
+    border-radius: 0px;
 }
