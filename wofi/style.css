@@ -1,17 +1,19 @@
 * {
   font-family: JetBrainsMono;
   color: #e5e9f0;
-  background: #1e1e1e;
+  background: #1b1b1b;
 }
 
 #window {
-  background: rgba(30, 30, 46, 1);
+  background: #1b1b1b;
   margin: auto;
   padding: 10px;
   border-radius: 20px;
-#  border: 2px solid #019EFF;
+  /*border: 2px solid #019EFF;*/
 }
-
+#scroll{
+  border: none;
+}
 #input {
   background: rgba(0, 0, 0, 0.5);
   color: white;

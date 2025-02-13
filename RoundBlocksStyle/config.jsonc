@@ -39,13 +39,24 @@
     "interval": 2
 },
 
+"wlr/taskbar": {
+"format": "{icon}\n.",
+"tooltip-format": "{title}",
+"on-click": "activate",
+"all-outputs": false,
+"active-first": false,
+"on-click-middle": "close",
+"icon-size": 15,
+"on-click-right": "minimize"
+},
+
 "custom/notification":{
 	"format": "",
-	"on-click": "swaync-client --open-panel"
+	"on-click": "~/scripts/launch_swaync.sh"
 },
 "custom/wofi":{
     "format": "󰀻",
-    "on-click": "wofi --show drun"
+    "on-click": "~/scripts/launch_wofi.sh"
 },
 "custom/smth":{
 	"format": ""
@@ -142,8 +153,8 @@
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl set 5%+",
-        "on-scroll-down": "brightnessctl set 5%-",
+        "on-scroll-up": "swayosd-client --brightness raise",
+        "on-scroll-down": "swayosd-client --brightness lower",
         "min-length": 6
     },
 
@@ -164,9 +175,9 @@
         "format": "{icon} {volume}%",
         "tooltip": false,
         "format-muted": " Muted",
-        "on-click": "pamixer -t",
-        "on-scroll-up": "pamixer -i 5",
-        "on-scroll-down": "pamixer -d 5",
+        "on-click": "swayosd-client --output-volume mute-toggle",
+        "on-scroll-up": "swayosd-client --output-volume 5",
+        "on-scroll-down": "swayosd-client --output-volume -5",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",
@@ -221,7 +232,7 @@
         "custom/poweroff":{
         "tooltip": false,
             "format": "⏻",
-            "on-click": "wlogout"
+            "on-click": "wleave"
 
 },
 "memory": {
