@@ -86,8 +86,8 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background: rgba(27, 27, 27, 1.0);    
-    /*background: #1b1b1b;*/
+    /*background: rgba(27, 27, 27, 1.0);   */ 
+    background: #1a1a1a;
     /*background: transparent;*/
     opacity: 1;
     padding: 0px 10px;

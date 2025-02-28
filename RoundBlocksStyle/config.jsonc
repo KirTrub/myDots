@@ -9,6 +9,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
+    "output": "HDMI-A-1",
     "height": 30,
 
     "modules-left": ["custom/wofi", "custom/filemanager","custom/edge", "custom/telegram",
@@ -52,7 +53,7 @@
 
 "custom/notification":{
 	"format": "",
-	"on-click": "~/scripts/launch_swaync.sh"
+	"on-click": "~/myDots/scripts/launch_swaync.sh"
 },
 "custom/wofi":{
     "format": "󰀻",
@@ -232,7 +233,7 @@
         "custom/poweroff":{
         "tooltip": false,
             "format": "⏻",
-            "on-click": "wleave"
+            "on-click": "wlogout"
 
 },
 "memory": {
