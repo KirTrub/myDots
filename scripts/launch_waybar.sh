@@ -22,5 +22,5 @@ sed -i "12s/\"output\": \".*\"/\"output\": \"$SELECTED_MONITOR\"/" "$CONFIG_FILE
 if pgrep -x "waybar" > /dev/null; then
     pkill waybar 
 else
-    hyprctl dispatch -- exec waybar -c ~/myDots/RoundBlocksStyle/config.jsonc -s ~/myDots/RoundBlocksStyle/style.css
+    hyprctl dispatch -- exec waybar -c ~/myDots/RoundBlocksStyle/config.jsonc -s ~/myDots/RoundBlocksStyle/style.css & sleep 2 && pkill blueman-applet && hyprctl dispatch exec blueman-applet
 fi

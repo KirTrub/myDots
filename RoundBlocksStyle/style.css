@@ -129,13 +129,12 @@ tooltip {
 
 #custom-wofi{
     color: #e0e0e0;
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 5px;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
     font-size: 17px;
         /*line-height: 2px;*/
 
     margin-right: 0px;
-    border-right: 1px dotted #000000;
 
 }
 
@@ -318,7 +317,7 @@ tooltip {
 #custom-poweroff{
     color: #e0e0e0;
   border-radius: 0px 10px 10px 0px;
-  margin-right: 5px;
+  margin-right: 0px;
   margin-left: 0px;
   padding: 0px 12px 0px 10px;
   font-size: 13px;

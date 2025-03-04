@@ -12,14 +12,12 @@
     "output": "HDMI-A-1",
     "height": 30,
 
-    "modules-left": ["custom/wofi", "custom/filemanager","custom/edge", "custom/telegram",
-    "custom/intellij", "custom/startwine", "custom/vkplayer", "custom/vpn", "custom/weather",
-    "hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces"],
 
 
 
-    "modules-center": ["clock", "custom/button"],
-    "modules-right": ["hyprland/language", "temperature","custom/power_profile","battery", "memory","cpu" ,"backlight","pulseaudio", "tray","custom/notification", "custom/poweroff"],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/language", "temperature","custom/power_profile","battery", "memory","cpu" ,"backlight","pulseaudio", "tray","custom/notification", "custom/wofi","custom/poweroff"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -32,8 +30,19 @@
 },
 "custom/filemanager":{
     "format": "",
-    "on-click": "nautilus"
+    "on-click": "thunar"
 },
+
+
+"custom/waybar-media": {
+        "return-type": "json",
+        "exec": "~/myDots/scripts/waybar-media.py status",
+        "on-click": "~/myDots/scripts/waybar-media.py playpause",
+        "on-scroll-up": "~/myDots/scripts/waybar-media.py previous",
+        "on-scroll-down": "~/myDots/scripts/waybar-media.py next",
+        "escape": true
+    },
+
 
 "cpu":{
     "format": " {usage}%",
@@ -41,7 +50,7 @@
 },
 
 "wlr/taskbar": {
-"format": "{icon}\n.",
+"format": "{icon}",
 "tooltip-format": "{title}",
 "on-click": "activate",
 "all-outputs": false,
@@ -57,7 +66,7 @@
 },
 "custom/wofi":{
     "format": "󰀻",
-    "on-click": "~/scripts/launch_wofi.sh"
+    "on-click": "~/myDots/scripts/launch_wofi.sh"
 },
 "custom/smth":{
 	"format": ""
@@ -71,7 +80,7 @@
    
 "custom/vpn":{
 	"format": "󰌆 ",
-	"on-click": "sudo -A prime-run hiddify"	
+	"on-click": "sudo -A hiddify"	
 },
 
 
