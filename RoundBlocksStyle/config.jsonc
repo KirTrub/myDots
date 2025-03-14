@@ -9,15 +9,17 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "output": "HDMI-A-1",
+    "output": "eDP-1",
     "height": 30,
 
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/wofi", "hyprland/workspaces"],
 
 
 
-    "modules-center": ["clock"],
-    "modules-right": ["hyprland/language", "temperature","custom/power_profile","battery", "memory","cpu" ,"backlight","pulseaudio", "tray","custom/notification", "custom/wofi","custom/poweroff"],
+    "modules-center": ["clock", "mpris"],
+    "modules-right": ["hyprland/language", "temperature","custom/power_profile",
+        "battery", "memory","cpu" ,"backlight","pulseaudio", 
+        "tray" , "custom/notification", "custom/settings","custom/poweroff"],
     "hyprland/window": {
         "format": "{}"
     },
@@ -33,16 +35,26 @@
     "on-click": "thunar"
 },
 
+"custom/settings":{
+    "format": "",
+    "on-click": "~/myDots/scripts/launch_gnome_cc.sh"
+},
 
-"custom/waybar-media": {
-        "return-type": "json",
-        "exec": "~/myDots/scripts/waybar-media.py status",
-        "on-click": "~/myDots/scripts/waybar-media.py playpause",
-        "on-scroll-up": "~/myDots/scripts/waybar-media.py previous",
-        "on-scroll-down": "~/myDots/scripts/waybar-media.py next",
-        "escape": true
+
+
+"mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": "{status_icon} <i>{artist} - {title}</i>",
+    "format-stoped": "",
+    "player-icons": {
+        "default": "",
+        "mpv": "🎵"
     },
-
+    "status-icons": {
+        "paused": "▶"
+    },
+    "ignored-players": ["firefox"]
+},
 
 "cpu":{
     "format": " {usage}%",
@@ -65,7 +77,7 @@
 	"on-click": "~/myDots/scripts/launch_swaync.sh"
 },
 "custom/wofi":{
-    "format": "󰀻",
+    "format": "󰣇",
     "on-click": "~/myDots/scripts/launch_wofi.sh"
 },
 "custom/smth":{
@@ -163,8 +175,8 @@
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
         "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "swayosd-client --brightness raise",
-        "on-scroll-down": "swayosd-client --brightness lower",
+        "on-scroll-up": "brightnessctl s 10%+",
+        "on-scroll-down": "brightnessctl s 10%-",
         "min-length": 6
     },
 
@@ -186,8 +198,8 @@
         "tooltip": false,
         "format-muted": " Muted",
         "on-click": "swayosd-client --output-volume mute-toggle",
-        "on-scroll-up": "swayosd-client --output-volume 5",
-        "on-scroll-down": "swayosd-client --output-volume -5",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "scroll-step": 5,
         "format-icons": {
             "headphone": "",

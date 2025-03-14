@@ -1,6 +1,6 @@
 * {
   font-family: JetBrainsMono;
-  color: #e5e9f0;
+  /*color: #e0e0e0;*/
 }
 
 #window {
@@ -32,11 +32,13 @@
 #entry {
   padding: 10px;
   border-radius: 15px;
+  color: #e0e0e0;
 }
 
 #entry:selected {
   border-radius: 15px;
-  background-color: #2e3440;
+  background-color: alpha(#e0e0e0, 0.1);
+  color: #ffffff;
   outline: none;
 }
 
