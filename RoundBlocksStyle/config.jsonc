@@ -9,7 +9,7 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "output": "eDP-1",
+    "output": "HDMI-A-1",
     "height": 30,
 
     "modules-left": ["custom/wofi", "hyprland/workspaces"],
