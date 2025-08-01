@@ -1,20 +1,20 @@
 * {
-  font-family: JetBrainsMono;
+    font-family: "JetBrainsMono Nerd Font";
   /*color: #e0e0e0;*/
 }
 
 #window {
-  background: #1b1b1b;
+  background: rgba(26, 26, 26, 0.6);
   margin: auto;
   padding: 10px;
-  border-radius: 20px;
-  /*border: 2px solid #019EFF;*/
+  border-radius: 0px;
+  /*border: 2 px solid #019EFF;*/
 }
 #scroll{
   border: none;
 }
 #input {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   padding: 10px;
   margin-bottom: 10px;

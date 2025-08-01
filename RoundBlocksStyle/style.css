@@ -10,14 +10,13 @@
 }
 
 window#waybar {
-    /*background: rgba(0, 0, 0, 0.3);*/
     background: rgba(27, 27, 27, 0.0);
     color: #cdd6f4;
+    border-radius: 10px;
 }
 
 tooltip {
-      background: #1a1a1a;   
-    
+    background: #1a1a1a;   
     border-radius: 10px;
     border-width: 1.5px;
     border-style: solid;
@@ -29,8 +28,6 @@ tooltip {
     font-size: 16px;
     transition: none;
 }
-
-
 
 #workspaces button.active {
     color: #e0e0e0;
@@ -78,6 +75,7 @@ tooltip {
 #custom-vpn,
 #custom-settings,
 #taskbar,
+#workspaces,
 #memory,
 #network,
 #custom-edge,
@@ -89,9 +87,7 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    /*background: rgba(27, 27, 27, 1.0);   */ 
-    background: #1a1a1a;
-    /*background: transparent;*/
+    background: alpha(#1a1a1a, 0.6);
     opacity: 1;
     padding: 0px 10px;
     margin: 0;
@@ -173,7 +169,7 @@ tooltip {
     border-radius: 20px;
     transition: none;
     border: 2px solid #e0e0e0;
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 1);
     padding-bottom: 7px;
     padding-top: 7px;
 }
@@ -187,11 +183,12 @@ tooltip {
 
 #tray menu menuitem:hover {
     transition: none;
+    background-color: alpha(#e0e0e0, 0.9);
+    color: #1a1a1a;
 }
 
 #workspaces {
     color: #e0e0e0;
-    background: rgba(27, 27, 27, 1.0);
     border-radius: 10px;
     transition: none;
     margin-left: 10px;
@@ -254,7 +251,7 @@ tooltip {
 
 #battery {
     color: #e0e0e0;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 10px 0px 0px 10px;
     margin-right: 0px;
     border: none;
 }
