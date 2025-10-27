@@ -9,14 +9,14 @@
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-    "output": "eDP-1",
+    "output": "HDMI-A-1",
     "height": 30,
 
-    "modules-left": ["custom/wofi", "hyprland/workspaces"],
+    "modules-left": ["custom/wofi", "hyprland/workspaces", "mpris"],
 
 
 
-    "modules-center": ["clock", "mpris"],
+    "modules-center": ["clock"],
     "modules-right": ["hyprland/language", "custom/power_profile",
         "battery", "pulseaudio", 
         "tray" , "custom/notification", "custom/settings","custom/poweroff"],

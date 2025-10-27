@@ -10,9 +10,9 @@
 }
 
 window#waybar {
-    background: rgba(27, 27, 27, 0.0);
+    background: rgba(27, 27, 27, 0);
     color: #cdd6f4;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 tooltip {
@@ -27,6 +27,9 @@ tooltip {
 #workspaces button label{
     font-size: 16px;
     transition: none;
+    margin: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #workspaces button.active {
@@ -49,7 +52,7 @@ tooltip {
 
 
 #workspaces button:hover {
-    background: #1a1a1a;
+    background: none;
     color: #cdd6f4;
     border-radius: 10px;
 }
@@ -87,7 +90,7 @@ tooltip {
 #workspaces,
 #tray,
 #backlight {
-    background: alpha(#1a1a1a, 0.6);
+    background: alpha(#1a1a1a, 1);
     opacity: 1;
     padding: 0px 10px;
     margin: 0;
@@ -126,8 +129,10 @@ tooltip {
 
 #custom-wofi{
     color: #e0e0e0;
+    padding-left: 10px;
     border-radius: 10px 10px 10px 10px;
     font-size: 18px;
+    margin-right: 10px;
     padding-right: 13px;
 }
 
@@ -191,8 +196,8 @@ tooltip {
     color: #e0e0e0;
     border-radius: 10px;
     transition: none;
-    margin-left: 10px;
-    padding-right: 5px;
+    margin-left: 0px;
+    padding-right: 0px;
     padding-left: 0px;
 }
 
@@ -212,6 +217,7 @@ tooltip {
 }
 
 #clock {
+    font-size: 13px;
     color: #e0e0e0;
     border-radius: 10px;
     margin-left: 5px;
@@ -276,7 +282,7 @@ tooltip {
   border-radius: 0px 10px 10px 0px;
   margin-right: 0px;
   margin-left: 0px;
-  padding: 0px 12px 0px 10px;
+  padding: 0px 15px 0px 10px;
   font-size: 13px;
 }
 #memory{
